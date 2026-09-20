@@ -12,7 +12,7 @@
     "dev": "concurrently \"npm run dev:react\" \"npm run dev:tailwind\" \"npm run dev:electron\"",
     "dev:react": "vite",
     "dev:tailwind": "tailwindcss -i ./src/index.css -o ./dist/assets/output.css -w",
-    "dev:electron": "electron .",
+    "dev:electron": "wait-on http://localhost:5173 && electron --trace-warnings .",
     "build": "vite build",
     "build:electron": "electron-builder",
     "lint": "eslint .",
@@ -46,6 +46,7 @@
     "globals": "^16.3.0",
     "tailwind-scrollbar": "^4.0.2",
     "tailwindcss": "^4.1.12",
-    "vite": "^7.1.2"
+    "vite": "^7.1.2",
+    "wait-on": "^9.1.0"
   }
 }
