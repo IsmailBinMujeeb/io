@@ -22,7 +22,7 @@ export default class TabsManager {
     this.setupResizeHandling();
   }
 
-  createTab(tabId, url = "https://startpage.com/") {
+  createTab(tabId, url = "https://duckduckgo.com/") {
     const view = new WebContentsView({
       webPreferences: {
         nodeIntegration: false,
@@ -280,10 +280,7 @@ export default class TabsManager {
               isValid.host
             }`
       );
-    else
-      tab.view.webContents.loadURL(
-        `https://startpage.com/sp/search?query=${url}`
-      );
+    else tab.view.webContents.loadURL(`https://duckduckgo.com/?q=${url}`);
   }
 
   goBack() {

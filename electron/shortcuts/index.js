@@ -64,7 +64,7 @@ export default (mainWindow, TabsClient) => {
           tabId: nanoid(),
           tabFavicon: null,
           tabTitle: `New Tab`,
-          tabUrl: `https://startpage.com`,
+          tabUrl: `https://duckduckgo.com/`,
         });
       },
       label: "Open New Tab",
